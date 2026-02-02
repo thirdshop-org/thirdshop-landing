@@ -11,7 +11,7 @@ type Link = {
     href: string;
     title: string;
 }
-
+const currentYear = new Date().getFullYear();
 const links: Link[] = [
 
 ];
@@ -51,8 +51,35 @@ const links: Link[] = [
 		<main class="px-4 md:px-10 lg:px-0 py-8 md:py-12 lg:py-16 pt-12 md:pt-16 h-full w-full container mx-auto overflow-y-auto overflow-x-hidden" >
             <slot></slot>
         </main>
-        <footer class="px-4 md:px-8 py-4 bg-white/80 backdrop-blur-md border-t border-gray-200" >
-            <p class="text-center text-xs md:text-sm text-gray-500" >Copyright &copy; 2025 Thirdshop. All rights reserved.</p>
+        
+        <footer class="border-t border-slate-200 bg-white mt-auto">
+            <div class="max-w-7xl mx-auto px-6 py-12 flex flex-col md:flex-row justify-between items-center gap-6">
+                
+                <!-- Logo / Name -->
+                <div class="flex flex-col items-center md:items-start">
+                    <span class="font-serif text-xl font-bold text-slate-900">La Brique.</span>
+                    <span class="text-xs text-slate-500 mt-1">Digital Sovereignty Protocol</span>
+                </div>
+        
+                <!-- Links (Mono style) -->
+                <nav class="flex gap-8 font-mono text-sm text-slate-600">
+                    <!-- <a href="https://github.com/ton-repo" target="_blank" class="hover:text-violet-600 hover:underline decoration-violet-600 underline-offset-4 transition-all">
+                        GitHub
+                    </a>
+                    <a href="#" class="hover:text-violet-600 hover:underline decoration-violet-600 underline-offset-4 transition-all">
+                        Manifesto
+                    </a>
+                    <a href="#" class="hover:text-violet-600 hover:underline decoration-violet-600 underline-offset-4 transition-all">
+                        Contact
+                    </a> -->
+                </nav>
+        
+                <!-- Copyright -->
+                <div class="text-xs text-slate-400 font-mono">
+                    © {currentYear} La Brique Open Source.
+                </div>
+            </div>
         </footer>
+        
 	</body>
 </html>
